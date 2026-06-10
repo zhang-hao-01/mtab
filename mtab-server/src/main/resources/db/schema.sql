@@ -1,8 +1,8 @@
--- mTab 数据库初始化脚本
+-- mytab 数据库初始化脚本
 -- @author zhanghao
 
-CREATE DATABASE IF NOT EXISTS `mtab` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `mtab`;
+CREATE DATABASE IF NOT EXISTS `mytab` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `mytab`;
 
 -- 用户表
 CREATE TABLE IF NOT EXISTS `user` (
