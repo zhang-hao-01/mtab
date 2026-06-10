@@ -1,0 +1,50 @@
+#!/bin/bash
+REPO_URL="https://repo1.maven.org/maven2"
+
+BOMS=(
+"io/zipkin/brave/brave-bom/5.16.0/brave-bom-5.16.0.pom"
+"com/datastax/oss/java-driver-bom/4.17.0/java-driver-bom-4.17.0.pom"
+"io/dropwizard/metrics/metrics-bom/4.2.25/metrics-bom-4.2.25.pom"
+"org/glassfish/jaxb/jaxb-bom/4.0.5/jaxb-bom-4.0.5.pom"
+"org/apache/groovy/groovy-bom/4.0.21/groovy-bom-4.0.21.pom"
+"org/infinispan/infinispan-bom/14.0.27.Final/infinispan-bom-14.0.27.Final.pom"
+"com/fasterxml/jackson/jackson-parent/2.15/jackson-parent-2.15.pom"
+"org/glassfish/jersey/jersey-bom/3.1.6/jersey-bom-3.1.6.pom"
+"org/eclipse/jetty/ee10/jetty-ee10-bom/12.0.8/jetty-ee10-bom-12.0.8.pom"
+"org/eclipse/jetty/jetty-bom/12.0.8/jetty-bom-12.0.8.pom"
+"org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom"
+"org/jetbrains/kotlin/kotlin-bom/1.9.23/kotlin-bom-1.9.23.pom"
+"org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.7.3/kotlinx-coroutines-bom-1.7.3.pom"
+"org/jetbrains/kotlinx/kotlinx-serialization-bom/1.6.3/kotlinx-serialization-bom-1.6.3.pom"
+"org/apache/logging/log4j/log4j-bom/2.21.1/log4j-bom-2.21.1.pom"
+"io/micrometer/micrometer-tracing-bom/1.2.5/micrometer-tracing-bom-1.2.5.pom"
+"org/mockito/mockito-bom/5.7.0/mockito-bom-5.7.0.pom"
+"org/sonatype/oss/oss-parent/7/oss-parent-7.pom"
+"com/squareup/okhttp3/okhttp-bom/4.12.0/okhttp-bom-4.12.0.pom"
+"io/opentelemetry/opentelemetry-bom/1.31.0/opentelemetry-bom-1.31.0.pom"
+"com/oracle/database/jdbc/ojdbc-bom/21.9.0.0/ojdbc-bom-21.9.0.0.pom"
+"io/prometheus/simpleclient_bom/0.16.0/simpleclient_bom-0.16.0.pom"
+"com/querydsl/querydsl-bom/5.0.0/querydsl-bom-5.0.0.pom"
+"io/projectreactor/reactor-bom/2023.0.5/reactor-bom-2023.0.5.pom"
+"io/rest-assured/rest-assured-bom/5.3.2/rest-assured-bom-5.3.2.pom"
+"io/rsocket/rsocket-bom/1.1.3/rsocket-bom-1.1.3.pom"
+"org/seleniumhq/selenium/selenium-bom/4.14.1/selenium-bom-4.14.1.pom"
+"org/springframework/amqp/spring-amqp-bom/3.1.4/spring-amqp-bom-3.1.4.pom"
+"org/springframework/batch/spring-batch-bom/5.1.1/spring-batch-bom-5.1.1.pom"
+"org/springframework/integration/spring-integration-bom/6.2.4/spring-integration-bom-6.2.4.pom"
+"org/springframework/pulsar/spring-pulsar-bom/1.0.5/spring-pulsar-bom-1.0.5.pom"
+"org/springframework/restdocs/spring-restdocs-bom/3.0.1/spring-restdocs-bom-3.0.1.pom"
+"org/springframework/security/spring-security-bom/6.2.4/spring-security-bom-6.2.4.pom"
+"org/springframework/session/spring-session-bom/3.2.2/spring-session-bom-3.2.2.pom"
+"org/springframework/ws/spring-ws-bom/4.0.10/spring-ws-bom-4.0.10.pom"
+"org/testcontainers/testcontainers-bom/1.19.7/testcontainers-bom-1.19.7.pom"
+)
+
+for bom in "${BOMS[@]}"; do
+    dir=$(dirname "$bom")
+    mkdir -p ~/.m2/repository/"$dir"
+    echo "Downloading $bom..."
+    curl -L -o ~/.m2/repository/"$bom" "$REPO_URL/$bom" 2>/dev/null && echo "OK" || echo "FAILED"
+done
+
+echo "All BOM files downloaded"
