@@ -1,0 +1,61 @@
+// 颜色变量
+$primary-color: #409eff;
+$success-color: #67c23a;
+$warning-color: #e6a23c;
+$danger-color: #f56c6c;
+$info-color: #909399;
+
+// 暗色主题
+$dark-bg: #1a1a2e;
+$dark-bg-secondary: #16213e;
+$dark-bg-card: rgba(255, 255, 255, 0.08);
+$dark-bg-card-hover: rgba(255, 255, 255, 0.12);
+$dark-text-primary: #e0e0e0;
+$dark-text-secondary: #a0a0a0;
+$dark-border: rgba(255, 255, 255, 0.1);
+$dark-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+// 亮色主题
+$light-bg: #f0f2f5;
+$light-bg-secondary: #ffffff;
+$light-bg-card: rgba(255, 255, 255, 0.9);
+$light-bg-card-hover: rgba(255, 255, 255, 1);
+$light-text-primary: #303133;
+$light-text-secondary: #606266;
+$light-border: rgba(0, 0, 0, 0.08);
+$light-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+
+// 间距
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// 圆角
+$border-radius-sm: 6px;
+$border-radius-md: 10px;
+$border-radius-lg: 16px;
+$border-radius-xl: 20px;
+
+// 字体
+$font-size-xs: 12px;
+$font-size-sm: 13px;
+$font-size-md: 14px;
+$font-size-lg: 16px;
+$font-size-xl: 20px;
+$font-size-xxl: 28px;
+
+// 过渡
+$transition-fast: 0.15s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// 毛玻璃
+$glass-blur: blur(12px);
+
+// 响应式断点
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

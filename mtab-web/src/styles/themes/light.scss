@@ -1,0 +1,32 @@
+[data-theme='light'] {
+  --bg-color: #{$light-bg};
+  --bg-secondary: #{$light-bg-secondary};
+  --bg-card: #{$light-bg-card};
+  --bg-card-hover: #{$light-bg-card-hover};
+  --text-primary: #{$light-text-primary};
+  --text-secondary: #{$light-text-secondary};
+  --border-color: #{$light-border};
+  --shadow: #{$light-shadow};
+
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+
+  .el-table {
+    --el-table-bg-color: #fff;
+    --el-table-tr-bg-color: #fff;
+    --el-table-header-bg-color: #fafafa;
+    --el-table-row-hover-bg-color: #f5f7fa;
+    --el-table-border-color: var(--border-color);
+    --el-table-text-color: var(--text-primary);
+    --el-table-header-text-color: var(--text-secondary);
+  }
+
+  .el-dialog {
+    --el-dialog-bg-color: #fff;
+  }
+
+  .el-card {
+    --el-card-bg-color: #fff;
+    --el-card-border-color: var(--border-color);
+  }
+}

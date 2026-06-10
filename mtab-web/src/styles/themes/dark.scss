@@ -1,0 +1,71 @@
+[data-theme='dark'] {
+  --bg-color: #{$dark-bg};
+  --bg-secondary: #{$dark-bg-secondary};
+  --bg-card: #{$dark-bg-card};
+  --bg-card-hover: #{$dark-bg-card-hover};
+  --text-primary: #{$dark-text-primary};
+  --text-secondary: #{$dark-text-secondary};
+  --border-color: #{$dark-border};
+  --shadow: #{$dark-shadow};
+
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+
+  // Element Plus 暗色覆盖
+  .el-menu {
+    background-color: transparent !important;
+    border-right: none !important;
+  }
+
+  .el-menu-item {
+    color: var(--text-primary) !important;
+
+    &:hover {
+      background-color: var(--bg-card-hover) !important;
+    }
+
+    &.is-active {
+      color: #{$primary-color} !important;
+      background-color: rgba(64, 158, 255, 0.1) !important;
+    }
+  }
+
+  .el-table {
+    --el-table-bg-color: transparent;
+    --el-table-tr-bg-color: transparent;
+    --el-table-header-bg-color: rgba(255, 255, 255, 0.05);
+    --el-table-row-hover-bg-color: rgba(255, 255, 255, 0.08);
+    --el-table-border-color: var(--border-color);
+    --el-table-text-color: var(--text-primary);
+    --el-table-header-text-color: var(--text-secondary);
+  }
+
+  .el-dialog {
+    --el-dialog-bg-color: #1e1e3a;
+    --el-dialog-title-font-size: 18px;
+  }
+
+  .el-card {
+    --el-card-bg-color: rgba(255, 255, 255, 0.06);
+    --el-card-border-color: var(--border-color);
+  }
+
+  .el-form-item__label {
+    color: var(--text-primary);
+  }
+
+  .el-input__wrapper {
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 0 1px var(--border-color) inset;
+  }
+
+  .el-select .el-input__wrapper {
+    background-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .el-pagination {
+    --el-pagination-bg-color: transparent;
+    --el-pagination-text-color: var(--text-primary);
+    --el-pagination-button-bg-color: rgba(255, 255, 255, 0.06);
+  }
+}
