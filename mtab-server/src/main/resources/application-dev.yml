@@ -9,8 +9,10 @@ spring:
     password: 880612+Zh
   data:
     redis:
-      host: localhost
-      port: 6379
+      host: 59.110.214.121
+      port: 12539
+      database: 2
+      password: 880612+Zh
   servlet:
     multipart:
       max-file-size: 10MB
